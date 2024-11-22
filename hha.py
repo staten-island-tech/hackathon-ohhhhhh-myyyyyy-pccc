@@ -17,6 +17,7 @@ tile_gap = 300
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 TILE_COLOR = (0, 0, 255)
+
 def reset_tiles():
     positions = []
     while len(positions) < 5:
@@ -68,7 +69,6 @@ while running:
             mouse_x, mouse_y = pygame.mouse.get_pos()
             for tile in tiles:
                 if tile["hold"] and tile["start_time"] > 0:
-                   
                     if (time.time() - tile["start_time"]) >= 1.0:
                         score += 1
                         tile["y"] = -tile_height
@@ -81,6 +81,9 @@ while running:
             reset_tile_position(tile)
 
     draw_tiles()
-    update_score(score) 
+
+    update_score(score)
 
     pygame.display.flip()
+
+pygame.quit()

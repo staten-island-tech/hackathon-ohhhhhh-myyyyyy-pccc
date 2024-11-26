@@ -120,4 +120,48 @@ After making the changes, did you test your code? What were the results?
 After running the code in the terminal, it worked! There was now a screen display.
 ## 7. **What Did You Learn?**
 In this section, reflect on what you learned from this coding session. Did you gain any new insights, or were there areas you still struggled with? 
-I was educated on how pygame can be utilized to create a screen display😀."""
+I was educated on how pygame can be utilized to create a screen display😀.
+11/26/24
+## 1. **Task/Problem Description**
+How do I make a screen display using pygame?
+## 2. **Initial Approach/Code**
+I took no initial approach, for this is my first time working with pygame and I honestly don't know a single thing about it.
+```python
+import pygame
+print(pygame.__version__)
+pygame.init()
+```
+I really didn't know what I could do to implement a screen display, as I'm not exactly familiar with pygame and what it can do.
+## 3. **Interaction with Copilot**
+### Questions/Requests to Copilot
+Write down the questions or requests you made to Copilot.
+How could one make a screen display in python using pygame?
+## 4. **Copilot's Suggestions/Code Changes**
+Record the code or suggestions Copilot provided. Include any changes or improvements Copilot suggested and how it influenced your approach.
+```python
+screen_width, screen_height = 800, 600
+screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption("lautobus")
+WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+clock = pygame.time.Clock()
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    screen.fill(GREEN)
+    pygame.display.flip()
+    clock.tick(60)
+pygame.quit()
+```
+## 5. **Reflection on Changes**
+Reflect on the changes made to your code after Copilot's suggestions.
+COPILOT was very helpful in creating a display screen where I will be able to add my own things in.
+## 6. **Testing and Results**
+After making the changes, did you test your code? What were the results?
+After running the code in the terminal, it worked! There was now a screen display.
+## 7. **What Did You Learn?**
+In this section, reflect on what you learned from this coding session. Did you gain any new insights, or were there areas you still struggled with? 
+I was educated on how pygame can be utilized to create a screen display😀.
+"""

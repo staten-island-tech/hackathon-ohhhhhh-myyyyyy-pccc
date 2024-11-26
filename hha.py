@@ -18,8 +18,8 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 TILE_COLOR = (0, 0, 255)
 
-hit_sound = pygame.mixer.Sound('hit_sound.wav')
-miss_sound = pygame.mixer.Sound('miss_sound.wav')
+hit_sound = pygame.mixer.Sound
+miss_sound = pygame.mixer.Sound
 
 def reset_tiles():
     positions = []
@@ -46,7 +46,6 @@ def draw_tiles():
         pygame.draw.rect(screen, TILE_COLOR, (tile["x"], tile["y"], tile_width, tile_height))
 
 tiles = reset_tiles()
-
 pygame.display.set_caption("Piano Tiles Game")
 score = 0
 missed_tiles = 0
